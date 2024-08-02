@@ -1,0 +1,273 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #121212;
+    color: #ffffff;
+}
+
+header {
+    background: #1e1e1e;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3em;
+    animation: fadeInSlide 2s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.5em;
+    animation: fadeInSlide 3s ease-in-out;
+}
+
+section {
+    padding: 2em 0;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form textarea {
+    margin: 0.5em 0;
+    padding: 0.5em;
+    width: 80%;
+    max-width: 500px;
+}
+
+form button {
+    padding: 0.5em 2em;
+    background: #ff4500;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #e03e00;
+}
+
+footer {
+    background: #1e1e1e;
+    padding: 1em 0;
+    text-align: center;
+}
+
+/* Account Section */
+.account {
+    background: #282828;
+    padding: 2em 1em;
+    text-align: center;
+}
+
+.account h3 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.account form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.account form input {
+    margin: 0.5em 0;
+    padding: 0.5em;
+    width: 80%;
+    max-width: 400px;
+}
+
+.account form button {
+    padding: 0.5em 2em;
+    background: #00bfff;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.account form button:hover {
+    background: #009acd;
+}
+
+/* Animations */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ie {
+    height: 300px;
+    width: 300px;
+    margin-top: 70px;
+    align-items: start;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+    .hero h2 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    form input, form textarea {
+        width: 90%;
+    }
+
+    .account form input {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.75em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    .hero {
+        height: 70vh;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    form input, form textarea {
+        width: 95%;
+    }
+
+    .account form input {
+        width: 95%;
+    }
+}
+
+@media (max-width: 576px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .hero h2 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    form button {
+        padding: 0.5em 1.5em;
+    }
+
+    .account h3 {
+        font-size: 1.5em;
+    }
+}.menu-bar {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.menu-button:hover {
+  transform: rotate(360deg);
+  
+}
+.menu-button img {
+  border-radius: 7777777px
+  
+  height: 30px;
+  width:30px;
+}
+.menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background-color: #444;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  min-width: 150px;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li {
+  padding: 10px;
+}
+
+.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+.menu ul li a:hover {
+  background-color: #555;
+}

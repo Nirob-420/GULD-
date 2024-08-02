@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Free Fire Guild</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            animation: slide-in-fwd-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        }
+        @keyframes slide-in-fwd-center {
+            0% {
+                transform: translateZ(-1400px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateZ(0);
+                opacity: 1;
+            }
+        }
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            color: #333;
+        }
+        p {
+            text-align: justify;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .section {
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+            animation: fade-in 1s ease both;
+        }
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .section-header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #1a73e8;
+        }
+        .contact-method {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .contact-method img {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+            border-radius: 50%;
+            background-color: #FFFFFF;
+            padding: 0px;
+        }
+        .contact-method h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .contact-method p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .contact-method a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        .contact-method a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <div class="section">
+            <div class="section-header">Messaging Platforms</div>
+            <div class="contact-method fade-in">
+                <img src="WhatsApp.svg.png" alt="WhatsApp">
+                <div>
+                    <h3>WhatsApp</h3>
+                    <p>Chat with us on WhatsApp:</p>
+                    <p><a href="https://wa.me+880 1328-345279" target="_blank">+880 1328-345279</a></p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

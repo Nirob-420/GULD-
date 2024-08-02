@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire Guild - Team Hyper</title>
+    <style>
+    @media screen and (max-width:668px){
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+    }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #e91e63;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: #2e2e2e;
+            color: #ffffff;
+            font-size: 1em;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #e91e63;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #ffffff;
+            background-color: #e91e63;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .btn:hover {
+            background-color: #d81b60;
+        }
+        .note {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #aaaaaa;
+            animation: fadeIn 2.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @media (min-width: 768px) {
+            .container {
+                padding: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TEAM HYPER</h1>
+        <div class="form-group">
+            <label for="member-name">Member Name</label>
+            <input type="text" id="member-name" name="member-name" placeholder="Enter member name">
+        </div>
+        <div class="form-group">
+            <label for="member-role">Member Role</label>
+            <input type="text" id="member-role" name="member-role" placeholder="Enter member role">
+        </div>
+        <div class="form-group">
+            <label for="member-level">Member Level</label>
+            <input type="text" id="member-level" name="member-level" placeholder="Enter member level">
+        </div>
+        <div class="form-group">
+            <label for="member-uid">Get Uid</label>
+            <input type="text" id="member-uid" name="member-uid" placeholder="Enter member UID">
+        </div>
+        <button class="btn" onclick="sendToWhatsApp()">Add Member</button>
+        <div class="note">
+            <p>You must have WhatsApp Business to join us here. Otherwise your information will not come to us.OR,<a href="contact.html">CONTACT</a></p>
+        </div>
+    </div>
+    <script>
+        function sendToWhatsApp() {
+            const name = document.getElementById('member-name').value;
+            const role = document.getElementById('member-role').value;
+            const level = document.getElementById('member-level').value;
+            const uid = document.getElementById('member-uid').value;
+
+            const message = `Member Name: ${name}%0A Member Role: ${role}%0A Member Level: ${level}%0A Member UID: ${uid}`;
+
+            const whatsappUrl = `https://wa.me/+8801870516299?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
